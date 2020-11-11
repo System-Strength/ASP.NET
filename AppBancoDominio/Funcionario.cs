@@ -14,6 +14,8 @@ namespace AppBancoDominio
         public string nm_func { get; set; }
         [DisplayName("Cargo do Funcionário:")]
         public string cg_func { get; set; }
+        [DisplayName("Endereço do Funcionário:")]
+        public string end_func { get; set; }
         [DisplayName("Telefone do Funcionário:")]
         public string tel_func { get; set; }
         [DisplayName("sexo do Funcionário:")]

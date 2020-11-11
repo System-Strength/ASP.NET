@@ -3,3 +3,4 @@ C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\AppBancoDomini
 C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\AppBancoDominio\obj\Debug\AppBancoDominio.csproj.CoreCompileInputs.cache
 C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\AppBancoDominio\obj\Debug\AppBancoDominio.dll
 C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\AppBancoDominio\obj\Debug\AppBancoDominio.pdb
+C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\AppBancoDominio\obj\Debug\AppBancoDominio.csprojAssemblyReference.cache

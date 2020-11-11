@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login - Palace Petz</title>
     <style>
 
 
@@ -94,20 +94,23 @@
                 background: #f5f5f5;
                 color: #333;
                 border: none;
-                margin: 8px 0;
+                margin-top: 20px;
+                margin-bottom: 20px;
                 letter-spacing: 1px;
                 font-weight: 300;
             }
 
-                section .container .user .formBx form .btn {
-                    max-width: 100px;
-                    background: #677eff;
-                    color: #fff;
-                    cursor: pointer;
-                    font-size: 14px;
-                    letter-spacing: 1px;
-                    transition: 0.5s;
-                }
+            section .container .user .formBx form .btn {
+                text-decoration: none;
+                padding: 10px;
+                max-width: 100px;
+                background: #677eff;
+                color: #fff;
+                cursor: pointer;
+                font-size: 14px;
+                letter-spacing: 1px;
+                transition: 0.5s;
+            }
 
             section .container .user .formBx form .signup {
                 position: relative;
@@ -192,7 +195,7 @@
                         <h2 id="text">Entrar como Funcionário</h2>
                         <input type="text" name="" id="text" placeholder="CPF do Funcionário ou CRMV de Veterinário">
                         <input type="password" name="" id="senha" placeholder="Senha">
-                        <a href="Views/Home/Index.cshtml" class="btn"><input type="submit" value="Login" class="btn"></a> 
+                        @Html.ActionLink("Login", "Index", "Inicio", new { area = "" }, new { @class = "btn" }) 
                         <p class="signup"><a href="#" onclick="toggleFormGer();"> ENTRAR COMO GERENTE</a></p>
                     </form>
                 </div>
@@ -203,8 +206,7 @@
                         <h2>Entrar como Gerente</h2>
                         <input type="text" name="" placeholder="CPF de Gerente">
                         <input type="password" name="" placeholder="Senha">
-
-                        <input type="submit" name="" value="Login">
+                        @Html.ActionLink("Login", "Index", "Inicio", new { area = "" }, new { @class = "btn" })
                         <p class="signup"><a href="#" onclick="toggleFormFunc();"> ENTRAR COMO FUNCIONÁRIO</a></p>
                     </form>
                 </div>
