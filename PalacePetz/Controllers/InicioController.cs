@@ -13,5 +13,13 @@ namespace PalacePetz.Controllers
         {
             return View();
         }
+        public ActionResult VerificaGer()
+        {
+            return View();
+        }
+        public ActionResult CadastrarFunc()
+        {
+            return View();
+        }
     }
 }

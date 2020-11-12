@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "VerificaGer";
+    Layout = "~/Views/Shared/_PalacePetz.cshtml";
+}
+
+<html>
+<style>
+    section {
+        margin-left: 5%;
+        display: inline-flex;
+    }
+
+    form {
+        background-color: white;
+        display: block;
+        width: 70vw;
+        height: 60vh;
+        margin-top: 10%;
+        margin-left: 30%;
+    }
+
+    h2 {
+        text-align: center;
+        display: inline-flex;
+        margin-top: 8%;
+        margin-left: 21%;
+        font: bold 15pt;
+    }
+
+    .senha {
+        font: bold 12pt sans-serif;
+        display: block;
+        margin: 10% 25%;
+        margin-bottom: 1%;
+        background: none;
+        width: 25vw;
+        border: none;
+        border-bottom: solid 3px #00aeff;
+        outline: none;
+    }
+
+        .senha:hover {
+            background: #E1E8ED;
+        }
+
+    .btn {
+        display: block;
+        margin-top: 8%;
+        margin-left: 35%;
+        text-decoration: none;
+        padding: 10px;
+        width: 50%;
+        max-width: 200px;
+        background: #677eff;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+        letter-spacing: 1px;
+        transition: 0.5s;
+    }
+        .btn:hover {
+            background: #677eff;
+        }
+
+    .limpar {
+        visibility: hidden;
+        outline: none;
+        display: block;
+        margin-top: 2%;
+        margin-left: 23.5%;
+        text-decoration: none;
+        padding: 10px;
+        max-width: 100px;
+        background: none;
+        border: none;
+        color: #677eff;
+        cursor: pointer;
+        font: bold 12pt sans-serif;
+        transition: 0.5s;
+    }
+
+    .limpar:hover {
+        text-decoration: solid underline #171720;
+    }
+</style>
+<body>
+    <section>
+        <form name="form">
+            <h2>Insira sua senha de Gerente</h2>
+            <input class="senha" type="password" id="senha" name="senha" onclick="Senha()" placeholder="Senha">
+            <input type="reset" class="limpar" id="limpar" onkeyup="Verifica()" onclick="Limpar()" value="Limpar">
+            @Html.ActionLink("Entrar", "Index", "Inicio", new { area = "" }, new { @class = "btn" })
+        </form>
+    </section>
+</body>
+@Scripts.Render("~/bundles/Limpar")
+</html>
