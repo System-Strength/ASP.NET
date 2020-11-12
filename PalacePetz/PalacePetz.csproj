@@ -177,6 +177,7 @@
     <Content Include="Css\alertify.default.css" />
     <Content Include="Css\sb-admin-2.css" />
     <Content Include="Css\sb-admin-2.min.css" />
+    <Content Include="fonts\cracha_func.png" />
     <Content Include="fonts\dog1.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\dog2.jpg" />
@@ -264,6 +265,7 @@
     <Content Include="Views\Shared\_PalacePetz.cshtml" />
     <Content Include="Views\Inicio\Index.cshtml" />
     <Content Include="Views\Inicio\VerificaGer.cshtml" />
+    <Content Include="Views\Inicio\CadastrarFunc.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -44,7 +44,8 @@
             background: #E1E8ED;
         }
 
-    .btn {
+    .btn_ent{
+        text-align: center;
         display: block;
         margin-top: 8%;
         margin-left: 35%;
@@ -59,9 +60,12 @@
         letter-spacing: 1px;
         transition: 0.5s;
     }
-        .btn:hover {
-            background: #677eff;
-        }
+    .btn_ent:hover {
+        text-decoration: none;
+        background: #88d9de;
+        color: black;
+        font-style: normal;
+    }
 
     .limpar {
         visibility: hidden;
@@ -89,8 +93,8 @@
         <form name="form">
             <h2>Insira sua senha de Gerente</h2>
             <input class="senha" type="password" id="senha" name="senha" onclick="Senha()" placeholder="Senha">
-            <input type="reset" class="limpar" id="limpar" onkeyup="Verifica()" onclick="Limpar()" value="Limpar">
-            @Html.ActionLink("Entrar", "Index", "Inicio", new { area = "" }, new { @class = "btn" })
+            <input type="reset" class="limpar" id="limpar" onclick="Limpar()" value="Limpar">
+            @Html.ActionLink("Entrar", "CadastrarFunc", "Inicio", new { area = "" }, new { @class = "btn_ent" })
         </form>
     </section>
 </body>
