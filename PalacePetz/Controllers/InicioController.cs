@@ -28,11 +28,17 @@ namespace PalacePetz.Controllers
         {
             if (ModelState.IsValid)
             {
-                var metodoProduto = new FuncionarioDAO();
-                metodoProduto.Insert(funcionario);
+                var metodoFuncionario = new FuncionarioDAO();
+                metodoFuncionario.Insert(funcionario);
                 return RedirectToAction("FuncCadastrados");
             }
             return View(funcionario);
+        }
+        public ActionResult FuncCadastrados()
+        {
+            var metodoFuncionario = new FuncionarioDAO();
+            var todosFuncionarios = metodoFuncionario.Listar();
+            return View(todosFuncionarios);
         }
     }
 }

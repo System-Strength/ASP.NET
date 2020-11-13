@@ -266,6 +266,7 @@
     <Content Include="Views\Inicio\Index.cshtml" />
     <Content Include="Views\Inicio\VerificaGer.cshtml" />
     <Content Include="Views\Inicio\CadastrarFunc.cshtml" />
+    <Content Include="Views\Inicio\FuncCadastrados.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

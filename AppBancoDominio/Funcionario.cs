@@ -9,7 +9,7 @@ namespace AppBancoDominio
         [DisplayName("ID do Funcionário:")]
         public int id_func { get; set; }
         [DisplayName("CPF do Funcionário:")]
-        [StringLength(14, MinimumLength = 14, ErrorMessage = "Esse campo deve ter 11 caracteres!")]
+        [StringLength(11, MinimumLength = 11, ErrorMessage = "Esse campo deve ter 11 caracteres!")]
         public string cpf_func { get; set; }
         [DisplayName("Nome do Funcionário:")]
         public string nm_func { get; set; }
