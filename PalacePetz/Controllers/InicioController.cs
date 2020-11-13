@@ -40,5 +40,56 @@ namespace PalacePetz.Controllers
             var todosFuncionarios = metodoFuncionario.Listar();
             return View(todosFuncionarios);
         }
+        public ActionResult EditarFunc(int id)
+        {
+            var metodoFuncionario = new FuncionarioDAO();
+            var funcionarios = metodoFuncionario.ListarId(id);
+            if(funcionarios == null)
+            {
+                return HttpNotFound();
+            }
+            return View(funcionarios);
+        }
+        [HttpPost]
+        public ActionResult EditarFunc(Funcionario funcionario)
+        {
+            if (ModelState.IsValid)
+            {
+                var metodoFuncionario = new FuncionarioDAO();
+                metodoFuncionario.Atualizar(funcionario);
+                return RedirectToAction("FuncCadastrados");
+            }
+            return View(funcionario);
+        }
+        public ActionResult DetalhesFunc(int id)
+        {
+            var metodoFuncionario = new FuncionarioDAO();
+            var funcionario = metodoFuncionario.ListarId(id);
+            if(funcionario == null)
+            {
+                return HttpNotFound();
+            }
+            return View(funcionario);
+        }
+        public ActionResult ExcluirFunc(int id)
+        {
+            var metodoFuncionario = new FuncionarioDAO();
+            var funcionario = metodoFuncionario.ListarId(id);
+
+            if(funcionario == null)
+            {
+                return HttpNotFound();
+            }
+            return View(funcionario);
+        }
+        [HttpPost, ActionName("ExcluirFunc")]
+        public ActionResult ExcluirFuncConf(int id)
+        {
+            var metodoFuncionario = new FuncionarioDAO();
+            Funcionario funcionario = new Funcionario();
+            funcionario.id_func = id;
+            metodoFuncionario.Excluir(funcionario);
+            return RedirectToAction("FuncCadastrados");
+        }
     }
 }
