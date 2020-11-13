@@ -4,16 +4,18 @@
     Layout = "~/Views/Shared/_PalacePetz.cshtml";
 }
 <style>
-    .back{
-        text-decoration:underline;
+    .back {
+        text-decoration: underline;
         margin-left: -5%;
         font: bold 10pt sans-serif;
         color: black;
     }
+
     section {
         margin-left: 18%;
         display: inline-flex;
     }
+
     h2 {
         text-align: center;
         display: inline-flex;
@@ -21,6 +23,7 @@
         font: bold 15pt;
         margin-bottom: 5%;
     }
+
     .form-horizontal {
         border-radius: 5px;
         padding-top: 2%;
@@ -31,6 +34,7 @@
         height: 90vh;
         margin-top: 5%;
     }
+
     .label2 {
         width: 30%;
         margin: 0% 10%;
@@ -38,11 +42,13 @@
         margin-right: -15%;
         font: bold 12pt sans-serif;
     }
+
     .form-group {
         margin-top: 4.2%;
         margin-left: 5%;
         display: flex;
     }
+
     .editor {
         font: italic 12pt sans-serif;
         display: flex;
@@ -52,13 +58,15 @@
         border-bottom: solid 3px #000;
         outline: none;
     }
-    .cracha{
+
+    .cracha {
         display: flex;
         width: 50%;
         margin-top: -50%;
         margin-left: 45%;
     }
-    .btn_cad{
+
+    .btn_cad {
         text-transform: uppercase;
         display: block;
         border: none;
@@ -74,11 +82,12 @@
         font-size: 14px;
         transition: 0.5s;
     }
-    .btn_cad:hover{
-        background: #88d9de;
-        color: black;
-        font:bold;
-    }
+
+        .btn_cad:hover {
+            background: #88d9de;
+            color: black;
+            font: bold;
+        }
 </style>
 <section>
 
@@ -86,58 +95,68 @@
     {
         @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
-        <h2>Cadastrar Funcionário</h2>
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.id_func, new { htmlAttributes = new { placeholder = "ID do Funcionário", @class = "editor" } })
-                @Html.ValidationMessageFor(model => model.id_func, "", new { @class = "text-danger" })
+        <div class="form-horizontal">
+            <h2>Cadastrar Funcionário</h2>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.id_func, new { htmlAttributes = new { placeholder = "ID do Funcionário", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.id_func, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.nm_func, new { htmlAttributes = new { placeholder = "Nome do Funcionário", @class = "editor" } })
-                @Html.ValidationMessageFor(model => model.nm_func, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.nm_func, new { htmlAttributes = new { placeholder = "Nome do Funcionário", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.nm_func, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.cpf_func, new { htmlAttributes = new { placeholder = "CPF do Funcionário", @class = "editor" } })
-                @Html.ValidationMessageFor(model => model.cpf_func, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.cpf_func, new { htmlAttributes = new { placeholder = "CPF do Funcionário", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.cpf_func, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.cg_func, new { htmlAttributes = new { placeholder = "Cargo do Funcionário", @class = "editor" } })
-                @Html.ValidationMessageFor(model => model.cg_func, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.cg_func, new { htmlAttributes = new { placeholder = "Cargo do Funcionário", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.cg_func, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.end_func, new { htmlAttributes = new { placeholder = "Endereço do Funcionário", @class = "editor" } })
-                @Html.ValidationMessageFor(model => model.end_func, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.end_func, new { htmlAttributes = new { placeholder = "Endereço do Funcionário", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.end_func, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.tel_func, new { htmlAttributes = new { placeholder = "Telefone do Funcionário", @class = "editor" } })
-                @Html.ValidationMessageFor(model => model.tel_func, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.tel_func, new { htmlAttributes = new { placeholder = "Telefone do Funcionário", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.tel_func, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Cadastrar" class="btn_cad" />
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Cadastrar" class="btn_cad" />
+                </div>
             </div>
-        </div>
-        <img src="~/fonts/cracha_func.png" class="cracha">
+            <img src="~/fonts/cracha_func.png" class="cracha">
 
-        <div>
-            @Html.ActionLink("Ver Listas de Funcionários Cadastrados", "FuncCadastrados", "Inicio",  new { @class= "back"})
+            <div>
+                @Html.ActionLink("Ver Listas de Funcionários Cadastrados", "FuncCadastrados", "Inicio", new { @class = "back" })
+            </div>
         </div>
-    </div> 
     }
 </section>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#cpf_func").inputmask("mask", { "mask": "999.999.999-99" }, { reverse: true });
+        })
+        $(document).ready(function () {
+            $("#tel_func").inputmask("mask", { "mask": "(99)9999-99999" });
+        })
+    </script>
+    }

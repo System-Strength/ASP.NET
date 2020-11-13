@@ -215,5 +215,7 @@
         }
     </script>
     @RenderBody()
+    @Scripts.Render("~/bundles/inputmask")
+    @RenderSection("scripts", required: false);
 </body>
 </html>
