@@ -8,6 +8,5 @@ create table tbl_func(
     nm_func varchar(50) not null,
     cg_func varchar(50) not null,
     end_func varchar(50) not null,
-    tel_func varchar(15) not null,
-    sx_func varchar(2)
+    tel_func varchar(15) not null
 );
