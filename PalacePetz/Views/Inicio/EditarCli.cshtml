@@ -59,7 +59,7 @@
     .cracha {
         display: flex;
         width: 50%;
-        margin-top: -50%;
+        margin-top: -55%;
         margin-left: 45%;
     }
 
@@ -67,7 +67,7 @@
         text-transform: uppercase;
         display: block;
         border: none;
-        margin-top: 10%;
+        margin-top: 8%;
         margin-left: 18%;
         text-decoration: none;
         padding: 10px;
@@ -116,6 +116,12 @@
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.end_cli, new { htmlAttributes = new { @class = "editor" } })
                     @Html.ValidationMessageFor(model => model.end_cli, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.comple_cli, new { htmlAttributes = new { @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.comple_cli, "", new { @class = "text-danger" })
                 </div>
             </div>
             <div class="form-group">

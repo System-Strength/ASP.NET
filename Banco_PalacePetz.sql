@@ -18,3 +18,5 @@ create table tbl_cliente(
     end_cli varchar(50) not null,
     tel_cli varchar(15) not null
 );
+alter table tbl_cliente add comple_cli varchar(100);
+select * from tbl_cliente;

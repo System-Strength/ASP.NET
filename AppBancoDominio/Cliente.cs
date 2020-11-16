@@ -19,6 +19,8 @@ namespace AppBancoDominio
         public string nm_cli { get; set; }
         [DisplayName("Endereço do Cliente:")]
         public string end_cli { get; set; }
+        [DisplayName("Complemento do Cliente:")]
+        public string comple_cli { get; set; }
         [DisplayName("Telefone do Cliente:")]
         public string tel_cli { get; set; }
     }
