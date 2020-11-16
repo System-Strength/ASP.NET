@@ -1,4 +1,4 @@
-﻿@model AppBancoDominio.Funcionario
+﻿@model AppBancoDominio.Cliente
 <style>
     .back {
         width: 100%;
@@ -38,18 +38,20 @@
 
     h2 {
         margin-top: -2%;
-        margin-bottom:8%;
+        margin-bottom: 8%;
         margin-left: -80%;
         text-align: center;
         font: bold 18pt sans-serif;
     }
-    h3{
+
+    h3 {
         display: inline-flex;
         margin-left: 30%;
         margin-top: 2%;
         margin-bottom: 2%;
-        font:bold 20pt sans-serif;
+        font: bold 20pt sans-serif;
     }
+
     .btn_exc {
         text-transform: uppercase;
         text-align: center;
@@ -73,58 +75,50 @@
 <h3>Você quer mesmo deletar esse Funcionário?</h3>
 <div class="container">
     <dl class="dl-horizontal">
-    <h2>Excluir Funcionario</h2>
+    <h2>Excluir Cliente</h2>
         <dt>
-            @Html.DisplayNameFor(model => model.id_func)
+            @Html.DisplayNameFor(model => model.id_cli)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.id_func)
+            @Html.DisplayFor(model => model.id_cli)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.cpf_func)
+            @Html.DisplayNameFor(model => model.cpf_cli)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.cpf_func)
+            @Html.DisplayFor(model => model.cpf_cli)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.nm_func)
+            @Html.DisplayNameFor(model => model.nm_cli)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.nm_func)
+            @Html.DisplayFor(model => model.nm_cli)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.cg_func)
+            @Html.DisplayNameFor(model => model.end_cli)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.cg_func)
+            @Html.DisplayFor(model => model.end_cli)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.end_func)
+            @Html.DisplayNameFor(model => model.tel_cli)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.end_func)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.tel_func)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.tel_func)
+            @Html.DisplayFor(model => model.tel_cli)
         </dd>
         @using (Html.BeginForm())
         {
             @Html.AntiForgeryToken()
-            @Html.ActionLink(" - Voltar para Lista", "FuncCadastrados", "Index",  new { @class = "back" })
+            @Html.ActionLink(" - Voltar para Lista", "ClientesCadastrados", "Index", new { @class = "back" })
             <input type="submit" value="Excluir" class="btn_exc" />
         }
     </dl>

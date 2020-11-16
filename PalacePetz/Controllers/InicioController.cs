@@ -146,5 +146,25 @@ namespace PalacePetz.Controllers
             }
             return View(cliente);
         }
+        public ActionResult ExcluirCli(int id)
+        {
+            var metodoCliente = new ClienteDAO();
+            var cliente = metodoCliente.ListarId(id);
+
+            if (cliente == null)
+            {
+                return HttpNotFound();
+            }
+            return View(cliente);
+        }
+        [HttpPost, ActionName("ExcluirCli")]
+        public ActionResult ExcluirCliConf(int id)
+        {
+            var metodoCliente = new ClienteDAO();
+            Cliente cliente = new Cliente();
+            cliente.id_cli = id;
+            metodoCliente.Excluir(cliente);
+            return RedirectToAction("ClientesCadastrados");
+        }
     }
 }

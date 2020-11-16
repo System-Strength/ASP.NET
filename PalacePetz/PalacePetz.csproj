@@ -280,6 +280,7 @@
     <Content Include="Views\Inicio\ClientesCadastrados.cshtml" />
     <Content Include="Views\Inicio\EditarCli.cshtml" />
     <Content Include="Views\Inicio\DetalhesCli.cshtml" />
+    <Content Include="Views\Inicio\ExcluirCli.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
