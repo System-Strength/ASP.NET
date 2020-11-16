@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace AppBancoDLL
 {
-    class ClienteDAO
+    public class ClienteDAO
     {
         private Banco db;
         public void Insert(Cliente cliente)
@@ -46,7 +46,7 @@ namespace AppBancoDLL
         }
         public void Salvar(Cliente cliente)
         {
-            if (cliente.id_func > 0)
+            if (cliente.id_cli > 0)
             {
                 Atualizar(cliente);
             }
@@ -68,7 +68,7 @@ namespace AppBancoDLL
             {
                 var strQuery = string.Format("select * from tbl_cliente where id_cli = {0} ", id);
                 var retorno = db.retornaComando(strQuery);
-                return listaFuncionario(retorno).FirstOrDefault();
+                return listaCliente(retorno).FirstOrDefault();
             }
         }
         private List<Cliente> listaCliente(MySqlDataReader retorno)

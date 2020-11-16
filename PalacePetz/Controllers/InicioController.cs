@@ -91,5 +91,23 @@ namespace PalacePetz.Controllers
             metodoFuncionario.Excluir(funcionario);
             return RedirectToAction("FuncCadastrados");
         }
+
+        //CLIENTE
+
+        public ActionResult CadastrarCli()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CadastrarCli(Cliente cliente)
+        {
+            if (ModelState.IsValid)
+            {
+                var metodoCliente = new ClienteDAO();
+                metodoCliente.Insert(cliente);
+                return RedirectToAction("CliCadastrados");
+            }
+            return View(cliente);
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace AppBancoDominio
     public class Cliente
     {
         [DisplayName("Código do Cliente:")]
-        public int cd_cli { get; set; }
+        public int id_cli { get; set; }
         [DisplayName("CPF do Cliente:")]
         [StringLength(14, MinimumLength = 14, ErrorMessage = "Esse campo deve ter 11 caracteres!")]
         public string cpf_cli { get; set; }

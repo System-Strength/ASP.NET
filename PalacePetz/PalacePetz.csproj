@@ -177,6 +177,7 @@
     <Content Include="Css\alertify.default.css" />
     <Content Include="Css\sb-admin-2.css" />
     <Content Include="Css\sb-admin-2.min.css" />
+    <Content Include="fonts\cracha_cli.png" />
     <Content Include="fonts\cracha_func.png" />
     <Content Include="fonts\dog1.jpg" />
     <Content Include="favicon.ico" />
@@ -275,6 +276,7 @@
     <Content Include="Views\Inicio\EditarFunc.cshtml" />
     <Content Include="Views\Inicio\DetalhesFunc.cshtml" />
     <Content Include="Views\Inicio\ExcluirFunc.cshtml" />
+    <Content Include="Views\Inicio\CadastrarCli.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
