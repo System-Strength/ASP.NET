@@ -115,5 +115,36 @@ namespace PalacePetz.Controllers
             var todosClientes = metodoCliente.Listar();
             return View(todosClientes);
         }
+        public ActionResult EditarCli(int id)
+        {
+            var metodoCliente = new ClienteDAO();
+            var clientes = metodoCliente.ListarId(id);
+            if (clientes == null)
+            {
+                return HttpNotFound();
+            }
+            return View(clientes);
+        }
+        [HttpPost]
+        public ActionResult EditarCli(Cliente cliente)
+        {
+            if (ModelState.IsValid)
+            {
+                var metodoCliente = new ClienteDAO();
+                metodoCliente.Atualizar(cliente);
+                return RedirectToAction("ClientesCadastrados");
+            }
+            return View(cliente);
+        }
+        public ActionResult DetalhesCli(int id)
+        {
+            var metodoCliente = new ClienteDAO();
+            var cliente = metodoCliente.ListarId(id);
+            if (cliente == null)
+            {
+                return HttpNotFound();
+            }
+            return View(cliente);
+        }
     }
 }
