@@ -277,6 +277,7 @@
     <Content Include="Views\Inicio\DetalhesFunc.cshtml" />
     <Content Include="Views\Inicio\ExcluirFunc.cshtml" />
     <Content Include="Views\Inicio\CadastrarCli.cshtml" />
+    <Content Include="Views\Inicio\ClientesCadastrados.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

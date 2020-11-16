@@ -93,45 +93,52 @@
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
-
-    <div class="form-horizontal">
-        <h2>Cadastrar Cliente</h2>
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-
-        <div class="form-group">
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.nm_cli, new { htmlAttributes = new { placeholder = "Nome do Cliente", @class = "editor" } })
-                @Html.ValidationMessageFor(model => model.nm_cli, "", new { @class = "text-danger" })
+        <div class="form-horizontal">
+            <h2>Cadastrar Cliente</h2>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.nm_cli, new { htmlAttributes = new { placeholder = "Nome do Cliente", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.nm_cli, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.cpf_cli, new { htmlAttributes = new { placeholder = "CPF do Cliente", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.cpf_cli, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.end_cli, new { htmlAttributes = new { placeholder = "Endereço do Cliente", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.end_cli, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.tel_cli, new { htmlAttributes = new { placeholder = "Telefone do Cliente", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.tel_cli, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Cadastrar" class="btn_cad" />
+                </div>
+            </div>
+            <img src="~/fonts/cracha_cli.png" class="cracha">
+            <div>
+                @Html.ActionLink("Ver Listas de Clientes Cadastrados", "ClientesCadastrados", "Inicio", new { @class = "back" })
             </div>
         </div>
-        <div class="form-group">
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.cpf_cli, new { htmlAttributes = new { placeholder = "CPF do Cliente", @class = "editor" } })
-                @Html.ValidationMessageFor(model => model.cpf_cli, "", new { @class = "text-danger" })
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.end_cli, new { htmlAttributes = new { placeholder = "Endereço do Cliente", @class = "editor" } })
-                @Html.ValidationMessageFor(model => model.end_cli, "", new { @class = "text-danger" })
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.tel_cli, new { htmlAttributes = new { placeholder = "Telefone do Cliente", @class = "editor" } })
-                @Html.ValidationMessageFor(model => model.tel_cli, "", new { @class = "text-danger" })
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Cadastrar" class="btn_cad" />
-            </div>
-        </div>
-        <img src="~/fonts/cracha_cli.png" class="cracha">
-        <div>
-            @Html.ActionLink("Ver Listas de Clientes Cadastrados", "", "Inicio", new { @class = "back" })
-        </div>
-    </div>
     }
 </section>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#cpf_cli").inputmask("mask", { "mask": "999.999.999-99" }, { reverse: true });
+        })
+        $(document).ready(function () {
+            $("#tel_cli").inputmask("mask", { "mask": "(99)9999-99999" });
+        })
+    </script>
+}

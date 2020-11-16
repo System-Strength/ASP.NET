@@ -105,9 +105,15 @@ namespace PalacePetz.Controllers
             {
                 var metodoCliente = new ClienteDAO();
                 metodoCliente.Insert(cliente);
-                return RedirectToAction("CliCadastrados");
+                return RedirectToAction("ClientesCadastrados");
             }
             return View(cliente);
+        }
+        public ActionResult ClientesCadastrados()
+        {
+            var metodoCliente = new ClienteDAO();
+            var todosClientes = metodoCliente.Listar();
+            return View(todosClientes);
         }
     }
 }

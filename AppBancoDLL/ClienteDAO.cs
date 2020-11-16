@@ -12,7 +12,7 @@ namespace AppBancoDLL
         public void Insert(Cliente cliente)
         {
             string strQuery = string.Format("Insert into tbl_cliente(nm_cli, end_cli, tel_cli, cpf_cli)" +
-                    "values('{0}', '{1}','{2}', '{3}', '{4}');", cliente.nm_cli, cliente.end_cli, cliente.tel_cli, cliente.cpf_cli.Replace(".", string.Empty).Replace("-", string.Empty)); ;
+                    "values('{0}', '{1}','{2}', '{3}');", cliente.nm_cli, cliente.end_cli, cliente.tel_cli, cliente.cpf_cli.Replace(".", string.Empty).Replace("-", string.Empty)); ;
             using (db = new Banco())
             {
                 db.ExecutaComando(strQuery);
