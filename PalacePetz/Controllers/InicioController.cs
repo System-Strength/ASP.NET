@@ -211,5 +211,15 @@ namespace PalacePetz.Controllers
             }
             return View(produto);
         }
+        public ActionResult DetalhesProd(int id)
+        {
+            var metodoProduto = new ProdutoDAO();
+            var produto = metodoProduto.ListarId(id);
+            if (produto == null)
+            {
+                return HttpNotFound();
+            }
+            return View(produto);
+        }
     }
 }

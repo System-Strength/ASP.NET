@@ -285,6 +285,7 @@
     <Content Include="Views\Inicio\CadastrarProd.cshtml" />
     <Content Include="Views\Inicio\ProdCadastrados.cshtml" />
     <Content Include="Views\Inicio\EditarProd.cshtml" />
+    <Content Include="Views\Inicio\DetalhesProd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
