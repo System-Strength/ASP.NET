@@ -221,5 +221,25 @@ namespace PalacePetz.Controllers
             }
             return View(produto);
         }
+        public ActionResult ExcluirProd(int id)
+        {
+            var metodoProduto = new ProdutoDAO();
+            var produto = metodoProduto.ListarId(id);
+
+            if (produto == null)
+            {
+                return HttpNotFound();
+            }
+            return View(produto);
+        }
+        [HttpPost, ActionName("ExcluirProd")]
+        public ActionResult ExcluirProdConf(int id)
+        {
+            var metodoProduto = new ProdutoDAO();
+            Produto produto = new Produto();
+            produto.id_prod = id;
+            metodoProduto.Excluir(produto);
+            return RedirectToAction("ProdCadastrados");
+        }
     }
 }
