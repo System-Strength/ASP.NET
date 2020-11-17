@@ -19,4 +19,15 @@ create table tbl_cliente(
     tel_cli varchar(15) not null
 );
 alter table tbl_cliente add comple_cli varchar(100);
+
+
+create table tbl_produto(
+	id_prod int primary key auto_increment,
+    nm_prod varchar(100) not null,
+    qntd_prod int not null,
+    cat_prod varchar(50) not null,
+    data_prod date
+);
+alter table tbl_produto add preco_prod decimal(6, 2) not null;
+
 select * from tbl_cliente;

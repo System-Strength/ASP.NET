@@ -283,6 +283,7 @@
     <Content Include="Views\Inicio\DetalhesCli.cshtml" />
     <Content Include="Views\Inicio\ExcluirCli.cshtml" />
     <Content Include="Views\Inicio\CadastrarProd.cshtml" />
+    <Content Include="Views\Inicio\ProdCadastrados.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

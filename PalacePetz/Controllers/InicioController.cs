@@ -184,5 +184,11 @@ namespace PalacePetz.Controllers
             }
             return View(produto);
         }
+        public ActionResult ProdCadastrados()
+        {
+            var metodoProduto = new ProdutoDAO();
+            var todosProdutos = metodoProduto.Listar();
+            return View(todosProdutos);
+        }
     }
 }
