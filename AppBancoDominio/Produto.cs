@@ -10,6 +10,8 @@ namespace AppBancoDominio
         public int id_prod { get; set; }
         [DisplayName("Nome do Produto:")]
         public string nm_prod { get; set; }
+        [DisplayName("Quantidade do Produto:")]
+        public int qntd_prod { get; set; }
         [DisplayName("Categoria do Produto:")]
         public string cat_prod { get; set; }
         [DisplayName("Data de cadastro do Produto:")]

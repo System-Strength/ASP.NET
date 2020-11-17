@@ -13,8 +13,8 @@ namespace AppBancoDLL
         private Banco db;
         public void Insert(Produto produto)
         {
-            string strQuery = string.Format("Insert into tbl_produto(nm_prod, cat_prod, data_prod)" +
-                    "values('{0}', '{1}','{2}');", produto.nm_prod, produto.cat_prod, produto.data_prod.ToString("yyyy-MM-dd"));
+            string strQuery = string.Format("Insert into tbl_produto(nm_prod, qntd_prod, cat_prod, data_prod)" +
+                    "values('{0}', '{1}', '{2}', '{3}');", produto.nm_prod, produto.qntd_prod, produto.cat_prod, produto.data_prod.ToString("yyyy-MM-dd"));
             using (db = new Banco())
             {
                 db.ExecutaComando(strQuery);
@@ -25,6 +25,7 @@ namespace AppBancoDLL
             var stratualiza = "";
             stratualiza += "update tbl_produto set ";
             stratualiza += string.Format(" nm_prod = '{0}', ", produto.nm_prod);
+            stratualiza += string.Format(" qntd_prod = '{0}', ", produto.qntd_prod);
             stratualiza += string.Format(" cat_prod = '{0}', ", produto.cat_prod);
             stratualiza += string.Format(" data_prod = '{0}' ", produto.data_prod.ToString("yyyy-MM-dd"));
             stratualiza += string.Format(" Where id_prod = {0};", produto.id_prod);
@@ -81,6 +82,7 @@ namespace AppBancoDLL
                 {
                     id_prod = int.Parse(retorno["id_prod"].ToString()),
                     nm_prod = retorno["nm_prod"].ToString(),
+                    qntd_prod = int.Parse(retorno["qntd_prod"].ToString()),
                     cat_prod = retorno["cat_prod"].ToString(),
                     data_prod = DateTime.Parse(retorno["data_prod"].ToString()),
                 };
