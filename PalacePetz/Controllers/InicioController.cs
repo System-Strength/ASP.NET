@@ -166,5 +166,23 @@ namespace PalacePetz.Controllers
             metodoCliente.Excluir(cliente);
             return RedirectToAction("ClientesCadastrados");
         }
+
+        //PRODUTOS
+
+        public ActionResult CadastrarProd()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CadastrarProd(Produto produto)
+        {
+            if (ModelState.IsValid)
+            {
+                var metodoProduto = new ProdutoDAO();
+                metodoProduto.Insert(produto);
+                return RedirectToAction("ProdCadastrados");
+            }
+            return View(produto);
+        }
     }
 }

@@ -179,6 +179,7 @@
     <Content Include="Css\sb-admin-2.min.css" />
     <Content Include="fonts\cracha_cli.png" />
     <Content Include="fonts\cracha_func.png" />
+    <Content Include="fonts\cracha_prod.png" />
     <Content Include="fonts\dog1.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\dog2.jpg" />
@@ -281,6 +282,7 @@
     <Content Include="Views\Inicio\EditarCli.cshtml" />
     <Content Include="Views\Inicio\DetalhesCli.cshtml" />
     <Content Include="Views\Inicio\ExcluirCli.cshtml" />
+    <Content Include="Views\Inicio\CadastrarProd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
