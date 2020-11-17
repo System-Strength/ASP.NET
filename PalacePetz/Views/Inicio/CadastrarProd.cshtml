@@ -117,6 +117,7 @@
         <div class="form-group">
             <div class="col-md-10">
                 @Html.EditorFor(model => model.preco_prod, new { htmlAttributes = new { placeholder = "Preço do Produto", @class = "editor" } })
+                <h7 style="font-style: italic; font-size: 10pt;">Obs. Digite apenas números....</h7>
                 @Html.ValidationMessageFor(model => model.preco_prod, "", new { @class = "text-danger" })
             </div>
         </div>
