@@ -190,5 +190,26 @@ namespace PalacePetz.Controllers
             var todosProdutos = metodoProduto.Listar();
             return View(todosProdutos);
         }
+        public ActionResult EditarProd(int id)
+        {
+            var metodoProduto = new ProdutoDAO();
+            var produtos = metodoProduto.ListarId(id);
+            if (produtos == null)
+            {
+                return HttpNotFound();
+            }
+            return View(produtos);
+        }
+        [HttpPost]
+        public ActionResult EditarProd(Produto produto)
+        {
+            if (ModelState.IsValid)
+            {
+                var metodoProduto = new ProdutoDAO();
+                metodoProduto.Atualizar(produto);
+                return RedirectToAction("ProdCadastrados");
+            }
+            return View(produto);
+        }
     }
 }

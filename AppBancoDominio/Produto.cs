@@ -16,6 +16,7 @@ namespace AppBancoDominio
         [DisplayName("Categoria do Produto:")]
         public string cat_prod { get; set; }
         [DisplayName("Preço do Produto:")]
+        [Required(ErrorMessage = "Digite apenas o número, sem vírgula ou ponto!")]
         public decimal preco_prod { get; set; }
         [DisplayName("Data de cadastro do Produto:")]
         [Required(ErrorMessage = "Digite a data de cadastro do produto!")]
