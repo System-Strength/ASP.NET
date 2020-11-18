@@ -288,6 +288,7 @@
     <Content Include="Views\Inicio\DetalhesProd.cshtml" />
     <Content Include="Views\Inicio\ExcluirProd.cshtml" />
     <Content Include="Views\Inicio\RelatorioVen.cshtml" />
+    <Content Include="Views\Inicio\Servicos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

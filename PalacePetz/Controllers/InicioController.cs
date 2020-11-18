@@ -245,5 +245,9 @@ namespace PalacePetz.Controllers
         {
             return View();
         }
+        public ActionResult Servicos()
+        {
+            return View();
+        }
     }
 }
