@@ -30,4 +30,5 @@ create table tbl_produto(
 );
 alter table tbl_produto add preco_prod decimal(6, 2) not null;
 
+
 select * from tbl_cliente;
