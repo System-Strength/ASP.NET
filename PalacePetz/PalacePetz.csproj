@@ -184,6 +184,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\dog2.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\serv_agenda.png" />
     <Content Include="fonts\serv_banho.png" />
     <Content Include="fonts\serv_consulta.png" />
     <Content Include="fonts\silder_one.jpg" />
