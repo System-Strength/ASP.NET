@@ -123,9 +123,9 @@
             @Html.DisplayFor(modelItem => item.hr_consulta)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Editar", "EditarConsul", new { id = item.cd_animal}) |
+            @Html.ActionLink("Detailhes", "Details", new { id = item.cd_animal}) |
+            @Html.ActionLink("Excluir", "Delete", new {  id = item.cd_animal })
         </td>
     </tr>
         }

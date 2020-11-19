@@ -270,5 +270,26 @@ namespace PalacePetz.Controllers
             var todosConsultas = metodoConsulta.Listar();
             return View(todosConsultas);
         }
+        public ActionResult EditarConsul(int id)
+        {
+            var metodoConsulta = new ConsultaDAO();
+            var consultas = metodoConsulta.ListarId(id);
+            if (consultas == null)
+            {
+                return HttpNotFound();
+            }
+            return View(consultas);
+        }
+        [HttpPost]
+        public ActionResult EditarConsul(Consulta consulta)
+        {
+            if (ModelState.IsValid)
+            {
+                var metodoConsulta = new ConsultaDAO();
+                metodoConsulta.Atualizar(consulta);
+                return RedirectToAction("ConsulCadastrados");
+            }
+            return View(consulta);
+        }
     }
 }
