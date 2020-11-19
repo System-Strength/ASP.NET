@@ -36,6 +36,16 @@ create table tbl_veterinario(
     crmv_vet int,
     nm_vet varchar(100) not null,
     tel_vet varchar(15) not null
-)
+);
 
-select * from tbl_cliente;
+create table tbl_consulta(
+	cd_animal int primary key auto_increment,
+    nm_cli varchar(50) not null,
+    cpf_cli varchar(14) not null,
+    end_cli varchar(50) not null,
+    tel_cli varchar(15) not null,
+    nm_vet varchar(100) not null,
+    dt_consulta date not null,
+    hr_consulta time not null
+);
+select * from tbl_consulta;
