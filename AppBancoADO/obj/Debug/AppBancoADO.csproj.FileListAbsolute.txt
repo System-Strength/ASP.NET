@@ -17,3 +17,4 @@ C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\AppBancoADO\ob
 C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\AppBancoADO\obj\Debug\AppBancoADO.csproj.CopyComplete
 C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\AppBancoADO\obj\Debug\AppBancoADO.dll
 C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\AppBancoADO\obj\Debug\AppBancoADO.pdb
+C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\AppBancoADO\obj\Debug\AppBancoADO.csprojAssemblyReference.cache
