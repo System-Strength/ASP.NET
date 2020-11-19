@@ -293,6 +293,7 @@
     <Content Include="Views\Inicio\RelatorioVen.cshtml" />
     <Content Include="Views\Inicio\Servicos.cshtml" />
     <Content Include="Views\Inicio\CadastrarConsul.cshtml" />
+    <Content Include="Views\Inicio\ConsulCadastrados.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

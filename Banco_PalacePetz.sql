@@ -48,4 +48,6 @@ create table tbl_consulta(
     dt_consulta date not null,
     hr_consulta time not null
 );
+alter table tbl_consulta add raca_animal varchar(100) not null;
+
 select * from tbl_consulta;

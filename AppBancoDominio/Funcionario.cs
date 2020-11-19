@@ -21,4 +21,3 @@ namespace AppBancoDominio
         public string tel_func { get; set; }
     }
 }
-

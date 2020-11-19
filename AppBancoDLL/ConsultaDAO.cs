@@ -14,8 +14,8 @@ namespace AppBancoDLL
         private Banco db;
         public void Insert(Consulta consulta)
         {
-            string strQuery = string.Format("Insert into tbl_consulta(nm_cli, cpf_cli, end_cli, tel_cli, nm_vet, dt_consulta, hr_consulta)" +
-                    "values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}');", consulta.nm_cli, consulta.cpf_cli.Replace(".", string.Empty).Replace("-", string.Empty), consulta.end_cli, consulta.tel_cli, consulta.nm_vet, consulta.dt_consulta.ToString("yyyy-MM-dd"), consulta.hr_consulta.ToString("00:00"));
+            string strQuery = string.Format("Insert into tbl_consulta(raca_animal, nm_cli, cpf_cli, end_cli, tel_cli, nm_vet, dt_consulta, hr_consulta)" +
+                    "values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}');", consulta.raca_animal, consulta.nm_cli, consulta.cpf_cli.Replace(".", string.Empty).Replace("-", string.Empty), consulta.end_cli, consulta.tel_cli, consulta.nm_vet, consulta.dt_consulta.ToString("yyyy-MM-dd"), consulta.hr_consulta.ToString("HH:mm"));
             using (db = new Banco())
             {
                 db.ExecutaComando(strQuery);
@@ -25,13 +25,14 @@ namespace AppBancoDLL
         {
             var stratualiza = "";
             stratualiza += "update tbl_consulta set ";
+            stratualiza += string.Format(" raca_animal = '{0}', ", consulta.raca_animal);
             stratualiza += string.Format(" nm_cli = '{0}', ", consulta.nm_cli);
             stratualiza += string.Format(" cpf_cli = '{0}' ", consulta.cpf_cli.ToString().Replace(".", string.Empty).Replace("-", string.Empty));
             stratualiza += string.Format(" end_cli = '{0}', ", consulta.end_cli);
             stratualiza += string.Format(" tel_cli = '{0}', ", consulta.tel_cli);
             stratualiza += string.Format(" nm_vet = '{0}', ", consulta.nm_vet);
             stratualiza += string.Format(" dt_consulta = '{0}', ", consulta.dt_consulta.ToString("yyyy-MM-dd"));
-            stratualiza += string.Format(" hr_consulta = '{0}' ", consulta.hr_consulta.ToString("00:00"));
+            stratualiza += string.Format(" hr_consulta = '{0}' ", consulta.hr_consulta.ToString("HH:mm"));
             stratualiza += string.Format(" Where cd_animal = {0};", consulta.cd_animal);
 
             using (db = new Banco())
@@ -85,6 +86,7 @@ namespace AppBancoDLL
                 var TempConsulta = new Consulta()
                 {
                     cd_animal = int.Parse(retorno["cd_animal"].ToString()),
+                    raca_animal = retorno["raca_animal"].ToString(),
                     nm_cli = retorno["nm_cli"].ToString(),
                     cpf_cli = retorno["cpf_cli"].ToString().Replace(".", string.Empty).Replace("-", string.Empty),
                     end_cli = retorno["end_cli"].ToString(),

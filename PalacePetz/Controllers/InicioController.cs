@@ -264,6 +264,11 @@ namespace PalacePetz.Controllers
             }
             return View(consulta);
         }
-
+        public ActionResult ConsulCadastrados()
+        {
+            var metodoConsulta = new ConsultaDAO();
+            var todosConsultas = metodoConsulta.Listar();
+            return View(todosConsultas);
+        }
     }
 }
