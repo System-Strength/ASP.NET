@@ -249,6 +249,9 @@ namespace PalacePetz.Controllers
         {
             return View();
         }
+
+        //CONSULTA 
+
         public ActionResult CadastrarConsul()
         {
             return View();
@@ -291,5 +294,16 @@ namespace PalacePetz.Controllers
             }
             return View(consulta);
         }
+        public ActionResult DetalhesConsul(int id)
+        {
+            var metodoConsul = new ConsultaDAO();
+            var consulta = metodoConsul.ListarId(id);
+            if (consulta == null)
+            {
+                return HttpNotFound();
+            }
+            return View(consulta);
+        }
+
     }
 }
