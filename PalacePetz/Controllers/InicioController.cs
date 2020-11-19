@@ -249,5 +249,21 @@ namespace PalacePetz.Controllers
         {
             return View();
         }
+        public ActionResult CadastrarConsul()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CadastrarConsul(Consulta consulta)
+        {
+            if (ModelState.IsValid)
+            {
+                var metodoConsulta = new ConsultaDAO();
+                metodoConsulta.Insert(consulta);
+                return RedirectToAction("ConsulCadastrados");
+            }
+            return View(consulta);
+        }
+
     }
 }
