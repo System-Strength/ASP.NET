@@ -4,8 +4,6 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppBancoDLL
 {
@@ -27,7 +25,7 @@ namespace AppBancoDLL
             stratualiza += "update tbl_consulta set ";
             stratualiza += string.Format(" raca_animal = '{0}', ", consulta.raca_animal);
             stratualiza += string.Format(" nm_cli = '{0}', ", consulta.nm_cli);
-            stratualiza += string.Format(" cpf_cli = '{0}' ", consulta.cpf_cli.ToString().Replace(".", string.Empty).Replace("-", string.Empty));
+            stratualiza += string.Format(" cpf_cli = '{0}', ", consulta.cpf_cli.ToString().Replace(".", string.Empty).Replace("-", string.Empty));
             stratualiza += string.Format(" end_cli = '{0}', ", consulta.end_cli);
             stratualiza += string.Format(" tel_cli = '{0}', ", consulta.tel_cli);
             stratualiza += string.Format(" nm_vet = '{0}', ", consulta.nm_vet);
