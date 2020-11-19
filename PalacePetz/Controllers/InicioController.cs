@@ -304,6 +304,25 @@ namespace PalacePetz.Controllers
             }
             return View(consulta);
         }
+        public ActionResult ExcluirConsul(int id)
+        {
+            var metodoConsulta = new ConsultaDAO();
+            var consulta = metodoConsulta.ListarId(id);
 
+            if (consulta == null)
+            {
+                return HttpNotFound();
+            }
+            return View(consulta);
+        }
+        [HttpPost, ActionName("ExcluirConsul")]
+        public ActionResult ExcluirConsulConf(int id)
+        {
+            var metodoConsulta = new ConsultaDAO();
+            Consulta consulta = new Consulta();
+            consulta.cd_animal = id;
+            metodoConsulta.Excluir(consulta);
+            return RedirectToAction("ConsulCadastrados");
+        }
     }
 }
