@@ -20,6 +20,7 @@
             background: #171720;
             margin: 5% 5%;
             width: 38%;
+            height: 70vh;
             border-radius: 15px;
             transition: 0.5s;
         }
@@ -38,20 +39,21 @@
         .btn_cards {
             display: inline-flex;
             background: #171720;
-            margin-top: 0%;
-            width: 40%;
-            height: 135px;
+            margin-top: 12%;
+            width: 100%;
+            height: 50px;
             border-radius: 15px;
-            margin-left: 24%;
-            padding: 15px;
+            padding: 8px;
             transition: 0.5s;
         }
-        .btn_agenda{
+        .btn_agenda {
+            background: #00aeff;
             text-transform: uppercase;
             border-radius: 10px;
             text-decoration: none;
             padding: 50px;
-            margin-top: -3%;
+            margin-top: 8%;
+            padding-top: 5%;
             width: 100%;
             text-align: center;
             color: #fff;
@@ -63,11 +65,6 @@
             text-decoration: none;
             color: #fff;
         }
-        .btn_cards:hover {
-            background: #00aeff;
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
-        }
     </style>
 </head>
 <body>
@@ -77,14 +74,17 @@
             <div class="box">
                 <img src="~/fonts/serv_consulta.png">
                 <h2>Consulta Veterinária</h2>
+                <div class="btn_cards">
+                    @Html.ActionLink("Agendar Consulta", "ProdCadastrados", "Inicio", new { @class = "btn_agenda" })
+                </div>
             </div>
             <div class="box">
                 <img src="~/fonts/serv_banho.png">
                 <h2>Banho e Tosa</h2>
+                <div class="btn_cards">
+                    @Html.ActionLink("Agendar Banho e Tosa", "CadastrarProd", "Inicio", new { @class = "btn_agenda" })
+                </div>
             </div>
-        </div>
-        <div class="btn_cards">
-            @Html.ActionLink("Agendar Serviço", "ProdCadastrados", "Inicio", new { @class = "btn_agenda" })
         </div>
     </section>
 </body>

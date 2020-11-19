@@ -30,5 +30,12 @@ create table tbl_produto(
 );
 alter table tbl_produto add preco_prod decimal(6, 2) not null;
 
+create table tbl_veterinario(
+	id_vet int primary key auto_increment,
+    cpf_vet varchar(14) not null,
+    crmv_vet int,
+    nm_vet varchar(100) not null,
+    tel_vet varchar(15) not null
+)
 
 select * from tbl_cliente;
