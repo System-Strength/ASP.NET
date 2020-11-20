@@ -342,5 +342,11 @@ namespace PalacePetz.Controllers
             }
             return View(banhotosa);
         }
+        public ActionResult BanhoTosaCadastrados()
+        {
+            var metodoBanhoTosa = new BanhoTosaDAO();
+            var todosBanhoTosas = metodoBanhoTosa.Listar();
+            return View(todosBanhoTosas);
+        }
     }
 }
