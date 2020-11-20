@@ -379,5 +379,25 @@ namespace PalacePetz.Controllers
             }
             return View(banhotosa);
         }
+        public ActionResult ExcluirBanhoTosa(int id)
+        {
+            var metodoBanhoTosa = new BanhoTosaDAO();
+            var banhotosa = metodoBanhoTosa.ListarId(id);
+
+            if (banhotosa == null)
+            {
+                return HttpNotFound();
+            }
+            return View(banhotosa);
+        }
+        [HttpPost, ActionName("ExcluirBanhoTosa")]
+        public ActionResult ExcluirBanhoTosaConf(int id)
+        {
+            var metodoBanhoTosa = new BanhoTosaDAO();
+            BanhoTosa banhotosa = new BanhoTosa();
+            banhotosa.cd_Animal = id;
+            metodoBanhoTosa.Excluir(banhotosa);
+            return RedirectToAction("BanhoTosaCadastrados");
+        }
     }
 }
