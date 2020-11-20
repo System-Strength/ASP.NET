@@ -28,10 +28,12 @@ namespace AppBancoDominio
         [DisplayName("Data:")]
         [Required(ErrorMessage = "Digite a data em que o serviço será realizado!")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime dt_consulta { get; set; }
+        public DateTime dt_serv { get; set; }
         [DisplayName("Hora:")]
         [Required(ErrorMessage = "Digite a hora em que o serviço será realizado!")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:HH:mm}")]
-        public DateTime hr_consulta { get; set; }
+        public DateTime hr_serv { get; set; }
+        [DisplayName("Forma de pagamento:")]
+        public string forma_paga { get; set; }
     }
 }

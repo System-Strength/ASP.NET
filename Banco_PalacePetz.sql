@@ -51,4 +51,17 @@ create table tbl_consulta(
 alter table tbl_consulta add forma_paga varchar(100) not null;
 alter table tbl_consulta add raca_animal varchar(100) not null;
 
+create table tbl_banhoTosa(
+	cd_animal int not null, constraint foreign key(cd_animal) references tbl_consulta(cd_animal),
+    raca_animal varchar(100) not null,
+    nm_cli varchar(50) not null,
+    cpf_cli varchar(14) not null,
+    end_cli varchar(50) not null,
+    tel_cli varchar(15) not null,
+    nm_func varchar(50) not null,
+    dt_serv date not null,
+    hr_serv time not null,
+    forma_paga varchar(100) not null
+);
+
 select * from tbl_consulta;
