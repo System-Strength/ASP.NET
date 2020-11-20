@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace AppBancoDominio
 {
-    public class Consulta
+    public class BanhoTosa
     {
         [DisplayName("Código do Animal:")]
         public int cd_animal { get; set; }
@@ -19,8 +23,8 @@ namespace AppBancoDominio
         public string end_cli { get; set; }
         [DisplayName("Telefone do Cliente:")]
         public string tel_cli { get; set; }
-        [DisplayName("Veterinário:")]
-        public string nm_vet { get; set; }
+        [DisplayName("Nome do Funcionário que realizará o serviço:")]
+        public string nm_func { get; set; }
         [DisplayName("Data:")]
         [Required(ErrorMessage = "Digite a data em que o serviço será realizado!")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
@@ -29,7 +33,5 @@ namespace AppBancoDominio
         [Required(ErrorMessage = "Digite a hora em que o serviço será realizado!")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:HH:mm}")]
         public DateTime hr_consulta { get; set; }
-        [DisplayName("Forma de pagamento:")]
-        public string forma_paga { get; set; }
     }
 }

@@ -148,6 +148,13 @@
         <dd>
             @Html.DisplayFor(model => model.hr_consulta)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.forma_paga)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.forma_paga)
+        </dd>
         @using (Html.BeginForm())
         {
             @Html.AntiForgeryToken()

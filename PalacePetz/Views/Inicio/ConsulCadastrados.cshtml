@@ -86,6 +86,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.hr_consulta)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.forma_paga)
+            </th>
             <th class="op">
                 Opções:
             </th>
@@ -123,9 +126,12 @@
             @Html.DisplayFor(modelItem => item.hr_consulta)
         </td>
         <td>
-            @Html.ActionLink("Editar", "EditarConsul", new { id = item.cd_animal}) |
-            @Html.ActionLink("Detalhes", "DetalhesConsul", new { id = item.cd_animal}) |
-            @Html.ActionLink("Excluir", "ExcluirConsul", new {  id = item.cd_animal })
+            @Html.DisplayFor(modelItem => item.forma_paga)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "EditarConsul", new { id = item.cd_animal }) |
+            @Html.ActionLink("Detalhes", "DetalhesConsul", new { id = item.cd_animal }) |
+            @Html.ActionLink("Excluir", "ExcluirConsul", new { id = item.cd_animal })
         </td>
     </tr>
         }
