@@ -297,6 +297,7 @@
     <Content Include="Views\Inicio\EditarConsul.cshtml" />
     <Content Include="Views\Inicio\DetalhesConsul.cshtml" />
     <Content Include="Views\Inicio\ExcluirConsul.cshtml" />
+    <Content Include="Views\Inicio\CadastrarBanhoTosa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

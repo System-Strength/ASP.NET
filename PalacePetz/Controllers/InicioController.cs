@@ -324,5 +324,23 @@ namespace PalacePetz.Controllers
             metodoConsulta.Excluir(consulta);
             return RedirectToAction("ConsulCadastrados");
         }
+
+        //BANHO E TOSA
+
+        public ActionResult CadastrarBanhoTosa()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CadastrarBanhoTosa(BanhoTosa banhotosa)
+        {
+            if (ModelState.IsValid)
+            {
+                var metodoBanhoTosa = new BanhoTosaDAO();
+                metodoBanhoTosa.Insert(banhotosa);
+                return RedirectToAction("BanhoTosaCadastrados");
+            }
+            return View(banhotosa);
+        }
     }
 }
