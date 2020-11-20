@@ -11,7 +11,7 @@ namespace AppBancoDominio
     public class BanhoTosa
     {
         [DisplayName("Código do Animal:")]
-        public int cd_animal { get; set; }
+        public int cd_Animal { get; set; }
         [DisplayName("Raça do Animal:")]
         public string raca_animal { get; set; }
         [DisplayName("Nome do Cliente:")]
@@ -23,7 +23,7 @@ namespace AppBancoDominio
         public string end_cli { get; set; }
         [DisplayName("Telefone do Cliente:")]
         public string tel_cli { get; set; }
-        [DisplayName("Nome do Funcionário que realizará o serviço:")]
+        [DisplayName("Funcionário:")]
         public string nm_func { get; set; }
         [DisplayName("Data:")]
         [Required(ErrorMessage = "Digite a data em que o serviço será realizado!")]
