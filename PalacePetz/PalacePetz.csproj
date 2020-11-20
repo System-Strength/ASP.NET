@@ -300,6 +300,7 @@
     <Content Include="Views\Inicio\CadastrarBanhoTosa.cshtml" />
     <Content Include="Views\Inicio\BanhoTosaCadastrados.cshtml" />
     <Content Include="Views\Inicio\EditarBanhoTosa.cshtml" />
+    <Content Include="Views\Inicio\DetalhesBanhoTosa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

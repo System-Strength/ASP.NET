@@ -1,4 +1,4 @@
-﻿@model AppBancoDominio.Consulta
+﻿@model AppBancoDominio.BanhoTosa
 <style>
     .back {
         width: 100%;
@@ -65,11 +65,11 @@
     <h2>Detalhes</h2>
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.cd_animal)
+            @Html.DisplayNameFor(model => model.cd_Animal)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.cd_animal)
+            @Html.DisplayFor(model => model.cd_Animal)
         </dd>
 
         <dt>
@@ -113,35 +113,37 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.nm_vet)
+            @Html.DisplayNameFor(model => model.nm_func)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.nm_vet)
+            @Html.DisplayFor(model => model.nm_func)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.dt_consulta)
+            @Html.DisplayNameFor(model => model.dt_serv)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.dt_consulta)
+            @Html.DisplayFor(model => model.dt_serv)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.hr_consulta)
+            @Html.DisplayNameFor(model => model.hr_serv)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.hr_consulta)
+            @Html.DisplayFor(model => model.hr_serv)
         </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.forma_paga)
         </dt>
+
         <dd>
             @Html.DisplayFor(model => model.forma_paga)
         </dd>
-        @Html.ActionLink("Voltar para Lista", "ConsulCadastrados", "Inicio", new { @class = "back" })
-        @Html.ActionLink("Editar", "EditarConsul", new { id = Model.cd_animal }, new { @class = "btn_edit" })
+        @Html.ActionLink("Voltar para Lista", "BanhoTosaCadastrados", "Inicio", new { @class = "back" })
+        @Html.ActionLink("Editar", "EditarBanhoTosa", new { id = Model.cd_Animal }, new { @class = "btn_edit" })
     </dl>
 </div>
