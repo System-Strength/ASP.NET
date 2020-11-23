@@ -302,6 +302,7 @@
     <Content Include="Views\Inicio\EditarBanhoTosa.cshtml" />
     <Content Include="Views\Inicio\DetalhesBanhoTosa.cshtml" />
     <Content Include="Views\Inicio\ExcluirBanhoTosa.cshtml" />
+    <Content Include="Views\Inicio\Info.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
