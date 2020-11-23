@@ -303,6 +303,7 @@
     <Content Include="Views\Inicio\DetalhesBanhoTosa.cshtml" />
     <Content Include="Views\Inicio\ExcluirBanhoTosa.cshtml" />
     <Content Include="Views\Inicio\Info.cshtml" />
+    <Content Include="Views\Inicio\Ajuda.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
