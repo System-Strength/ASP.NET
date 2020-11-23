@@ -406,5 +406,12 @@ namespace PalacePetz.Controllers
         {
             return View();
         }
+
+        //AJUDA
+
+        public ActionResult Ajuda()
+        {
+            return View();
+        }
     }
 }
