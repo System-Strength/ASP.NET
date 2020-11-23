@@ -399,5 +399,12 @@ namespace PalacePetz.Controllers
             metodoBanhoTosa.Excluir(banhotosa);
             return RedirectToAction("BanhoTosaCadastrados");
         }
+
+        //INFORMAÇÕES DA LOJA
+
+        public ActionResult Info()
+        {
+            return View();
+        }
     }
 }
