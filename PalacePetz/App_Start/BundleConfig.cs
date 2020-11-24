@@ -25,8 +25,7 @@ namespace PalacePetz
             bundles.Add(new ScriptBundle("~/bundles/Limpar").Include(
                       "~/Scripts/Limpar.js"));
 
-
-            bundles.Add(new ScriptBundle("~/bundles/Limpar").Include(
+            bundles.Add(new ScriptBundle("~/bundles/Accordion").Include(
                       "~/Scripts/Accordion.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
