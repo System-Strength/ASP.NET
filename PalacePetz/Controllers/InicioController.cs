@@ -11,25 +11,6 @@ namespace PalacePetz.Controllers
     public class InicioController : Controller
     {
         // GET: Inicio
-        public ActionResult Login(Login login)
-        {
-            if (login is null)
-            {
-                throw new ArgumentNullException(nameof(login));
-            }
-            return View();
-        }
-        [HttpPost]
-        public ActionResult Login(Funcionario funcionario)
-        {
-            if (ModelState.IsValid)
-            {
-                var metodoFuncionario = new LoginDAO();
-                metodoFuncionario.Listar();
-                return RedirectToAction("Index");
-            }
-            return View(funcionario);
-        }
         public ActionResult Index()
         {
             return View();

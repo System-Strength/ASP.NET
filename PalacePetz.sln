@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppBancoDLL", "AppBancoDLL\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppBancoDominio", "AppBancoDominio\AppBancoDominio.csproj", "{09BCD0E7-1008-4694-8433-A9842D7E24B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj", "{AC15B519-2B3F-4A57-AE0B-95B336986653}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{09BCD0E7-1008-4694-8433-A9842D7E24B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09BCD0E7-1008-4694-8433-A9842D7E24B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09BCD0E7-1008-4694-8433-A9842D7E24B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC15B519-2B3F-4A57-AE0B-95B336986653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC15B519-2B3F-4A57-AE0B-95B336986653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC15B519-2B3F-4A57-AE0B-95B336986653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC15B519-2B3F-4A57-AE0B-95B336986653}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
