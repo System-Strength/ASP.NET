@@ -272,7 +272,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Shared\_PalacePetz.cshtml" />
     <Content Include="Views\Inicio\Index.cshtml" />
     <Content Include="Views\Inicio\VerificaGer.cshtml" />
@@ -305,6 +304,8 @@
     <Content Include="Views\Inicio\ExcluirBanhoTosa.cshtml" />
     <Content Include="Views\Inicio\Info.cshtml" />
     <Content Include="Views\Inicio\Ajuda.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\LoginTeste.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

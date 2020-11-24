@@ -1,4 +1,4 @@
-﻿
+﻿@model AppBancoDominio.Login
 @{
     Layout = null;
 }
@@ -192,11 +192,33 @@
                 <div class="imgBx"><img src="~/fonts/dog1.jpg" alt="" id="img"></div>
                 <div class="formBx">
                     <form>
-                        <h2 id="text">Entrar como Funcionário</h2>
-                        <input type="text" name="" id="text" placeholder="CPF do Funcionário ou CRMV de Veterinário">
-                        <input type="password" name="" id="senha" placeholder="Senha">
-                        @Html.ActionLink("Login", "Index", "Inicio", new { area = "" }, new { @class = "btn" }) 
-                        <p class="signup"><a href="#" onclick="toggleFormGer();"> ENTRAR COMO GERENTE</a></p>
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                            <h2 id="text">Entrar como Funcionário</h2>
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.id_func, new { htmlAttributes = new { placeholder = "ID de Funcionário", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.id_func, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.cpf_func, new { htmlAttributes = new { placeholder = "CPF do Funcionário", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.cpf_func, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Login" class="btn btn-default" />
+                                </div>
+                            </div>
+                            <p class="signup"><a href="#" onclick="toggleFormGer();"> ENTRAR COMO GERENTE</a></p>
+                        </div>
+                        }
                     </form>
                 </div>
             </div>
@@ -204,8 +226,8 @@
                 <div class="formBx">
                     <form>
                         <h2>Entrar como Gerente</h2>
-                        <input type="text" name="" placeholder="CPF de Gerente">
-                        <input type="password" name="" placeholder="Senha">
+                        <input type="text" name="" placeholder="ID de Funcionário">
+                        <input type="password" name="" placeholder="CPF de Funcionário">
                         @Html.ActionLink("Login", "Index", "Inicio", new { area = "" }, new { @class = "btn" })
                         <p class="signup"><a href="#" onclick="toggleFormFunc();"> ENTRAR COMO FUNCIONÁRIO</a></p>
                     </form>
