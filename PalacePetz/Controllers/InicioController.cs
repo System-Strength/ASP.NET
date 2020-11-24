@@ -28,7 +28,7 @@ namespace PalacePetz.Controllers
                 metodoFuncionario.Listar();
                 return RedirectToAction("Index");
             }
-            return View();
+            return View(funcionario);
         }
         public ActionResult Index()
         {

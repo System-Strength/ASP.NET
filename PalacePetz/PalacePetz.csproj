@@ -303,8 +303,6 @@
     <Content Include="Views\Inicio\ExcluirBanhoTosa.cshtml" />
     <Content Include="Views\Inicio\Info.cshtml" />
     <Content Include="Views\Inicio\Ajuda.cshtml" />
-    <Content Include="Views\Login\Login.cshtml" />
-    <Content Include="Views\Login\LoginTeste.cshtml" />
     <Content Include="Views\Inicio\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
