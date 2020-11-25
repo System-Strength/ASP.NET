@@ -189,3 +189,13 @@ C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\PalacePetz\obj
 C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\PalacePetz\obj\Debug\PalacePetz.pdb
 C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\PalacePetz\obj\Debug\PalacePetz.Properties.Resources.resources
 C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\PalacePetz\obj\Debug\PalacePetz.csproj.GenerateResource.cache
+C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\PalacePetz\bin\EntityFramework.dll
+C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\PalacePetz\bin\EntityFramework.SqlServer.dll
+C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\PalacePetz\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\PalacePetz\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\PalacePetz\bin\MySql.Data.Entity.EF6.dll
+C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\PalacePetz\bin\EntityFramework.xml
+C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\PalacePetz\bin\EntityFramework.SqlServer.xml
+C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\PalacePetz\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\PalacePetz\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Matheus Souza\OneDrive\Documentos\ASP NET\TCM\PalacePetz\PalacePetz\bin\MySql.Data.Entity.EF6.xml
