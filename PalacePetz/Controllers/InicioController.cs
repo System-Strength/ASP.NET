@@ -13,13 +13,7 @@ namespace PalacePetz.Controllers
         //GET: Inicio
         public ActionResult Login()
         {
-            if (ModelState.IsValid)
-            {
-                return View();
-            }
-            else {
-                return RedirectToAction("Index");
-            }
+            return View();
         }
         public ActionResult Index()
         {

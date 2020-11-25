@@ -15,6 +15,7 @@ namespace AppBancoDLL
         {
             string strQuery = string.Format("Insert into tbl_func(nm_func, cg_func, end_func, tel_func, cpf_func)" +
                     "values('{0}', '{1}','{2}', '{3}', '{4}');", funcionario.nm_func, funcionario.cg_func, funcionario.end_func, funcionario.tel_func, funcionario.cpf_func.Replace(".", string.Empty).Replace("-", string.Empty)); ;
+            
             using (db = new Banco())
             {
                 db.ExecutaComando(strQuery);
