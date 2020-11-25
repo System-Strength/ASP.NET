@@ -45,6 +45,7 @@
         }
 
     .btn_ent{
+        border: none;
         text-align: center;
         display: block;
         margin-top: 8%;
@@ -90,11 +91,11 @@
 </style>
 <body>
     <section>
-        <form name="form">
+        <form name="form" action="CadastrarFunc">
             <h2>Insira sua senha de Gerente</h2>
             <input class="senha" type="password" id="senha" name="senha" onclick="Senha()" placeholder="Senha">
             <input type="reset" class="limpar" id="limpar" onclick="Limpar()" value="Limpar">
-            @Html.ActionLink("Entrar", "CadastrarFunc", "Inicio", new { area = "" }, new { @class = "btn_ent" })
+            <input type="submit" class="btn_ent" value="Entrar" onclick="Entrar()">
         </form>
     </section>
 </body>
