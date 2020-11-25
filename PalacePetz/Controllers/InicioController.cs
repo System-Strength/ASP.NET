@@ -21,11 +21,6 @@ namespace PalacePetz.Controllers
         }
         public ActionResult VerificaGer()
         {
-
-            if ()
-            {
-                RedirectToAction("CadastrarFunc");
-            }
             return View();
         }
         public ActionResult CadastrarFunc()
