@@ -93,4 +93,4 @@ create table tbl_login(
 	id_func int not null primary key, constraint foreign key(id_func) references tbl_func(id_func),
     cpf_func varchar(14) not null
 );
-select * from tbl_login;
+select * from tbl_VendaProd;
