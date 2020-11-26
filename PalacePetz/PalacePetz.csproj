@@ -329,6 +329,7 @@
     <Content Include="Views\Inicio\Info.cshtml" />
     <Content Include="Views\Inicio\Ajuda.cshtml" />
     <Content Include="Views\Inicio\Login.cshtml" />
+    <Content Include="Views\Inicio\VendaProd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

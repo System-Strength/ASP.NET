@@ -82,7 +82,7 @@ create table tbl_VendaProd(
     Nm_cli varchar(50) not null,
     Cpf_cli varchar(14) not null,
     End_cli varchar(50) not null,
-    comple_cli varchar(100),
+    Comple_cli varchar(100),
     Tel_cli varchar(15) not null,
 	Nm_prod varchar(100) not null,
     Qntd_prod int not null,

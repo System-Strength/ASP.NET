@@ -253,7 +253,16 @@ namespace PalacePetz.Controllers
         {
             return View();
         }
-
+        [HttpPost]
+        public ActionResult VendaProd(VendaProd vendaprod)
+        {
+            if (ModelState.IsValid)
+            {
+                var metodoVendaProd = new VendaProdDAO();
+                metodoVendaProd.Insert(vendaprod);
+            }
+            return View(vendaprod);
+        }
         public ActionResult RelatorioVen()
         {
             return View();
