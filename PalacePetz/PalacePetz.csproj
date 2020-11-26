@@ -204,6 +204,7 @@
     <Content Include="fonts\cracha_cli.png" />
     <Content Include="fonts\cracha_func.png" />
     <Content Include="fonts\cracha_prod.png" />
+    <Content Include="fonts\cracha_vendProd.png" />
     <Content Include="fonts\dog1.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\dog2.jpg" />
