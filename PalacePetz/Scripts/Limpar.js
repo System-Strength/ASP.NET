@@ -5,9 +5,6 @@ function Entrar() {
     if (document.getElementById("senha").value == "") {
         alert("Obrigatório informar sua senha de Gerente");
     }
-    else {
-
-    }
 }
 function Senha() {
     document.getElementById("limpar").style.visibility = "visible";   
