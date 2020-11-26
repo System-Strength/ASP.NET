@@ -78,7 +78,7 @@ create table tbl_BanhoTosa(
     forma_paga varchar(100) not null
 );
 create table tbl_login(
-	id_func int not null primary key auto_increment , constraint foreign key(id_func) references tbl_func(id_func),
+	id_func int not null primary key, constraint foreign key(id_func) references tbl_func(id_func),
     cpf_func varchar(14) not null
 );
 select * from tbl_login;

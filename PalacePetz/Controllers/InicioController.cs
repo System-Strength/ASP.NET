@@ -12,7 +12,7 @@ namespace PalacePetz.Controllers
     {
         //GET: Inicio
         public ActionResult Login()
-        {
+        { 
             return View();
         }
         public ActionResult Index()
@@ -25,7 +25,7 @@ namespace PalacePetz.Controllers
             {
                 return View();
             }
-            return RedirectToAction("FuncCadastrados");
+            return RedirectToAction("CadastrarFunc");
         }
         public ActionResult CadastrarFunc()
         {
