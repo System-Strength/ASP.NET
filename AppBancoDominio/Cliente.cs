@@ -23,5 +23,6 @@ namespace AppBancoDominio
         public string comple_cli { get; set; }
         [DisplayName("Telefone do Cliente:")]
         public string tel_cli { get; set; }
+
     }
 }

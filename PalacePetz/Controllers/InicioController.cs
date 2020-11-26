@@ -249,6 +249,11 @@ namespace PalacePetz.Controllers
             metodoProduto.Excluir(produto);
             return RedirectToAction("ProdCadastrados");
         }
+        public ActionResult VendaProd()
+        {
+            return View();
+        }
+
         public ActionResult RelatorioVen()
         {
             return View();

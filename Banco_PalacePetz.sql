@@ -77,6 +77,18 @@ create table tbl_BanhoTosa(
     hr_serv time not null,
     forma_paga varchar(100) not null
 );
+create table tbl_VendaProd(
+	cd_venda int not null primary key auto_increment,
+    Nm_cli varchar(50) not null,
+    Cpf_cli varchar(14) not null,
+    End_cli varchar(50) not null,
+    comple_cli varchar(100),
+    Tel_cli varchar(15) not null,
+	Nm_prod varchar(100) not null,
+    Qntd_prod int not null,
+    Cat_prod varchar(50) not null,
+    Forma_paga varchar(100) not null
+);
 create table tbl_login(
 	id_func int not null primary key, constraint foreign key(id_func) references tbl_func(id_func),
     cpf_func varchar(14) not null
