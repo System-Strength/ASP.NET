@@ -201,6 +201,7 @@
     <Content Include="Css\alertify.default.css" />
     <Content Include="Css\sb-admin-2.css" />
     <Content Include="Css\sb-admin-2.min.css" />
+    <Content Include="fonts\animation1.gif" />
     <Content Include="fonts\cracha_cli.png" />
     <Content Include="fonts\cracha_func.png" />
     <Content Include="fonts\cracha_prod.png" />
