@@ -30,6 +30,11 @@
         height: 98vh;
         margin-top: 0.8%;
     }
+    .text-danger{
+        margin-left: -20%;
+        padding-bottom: 1%;
+        font-size: 10pt;
+    }
 
     .label2 {
         width: 30%;
@@ -38,7 +43,6 @@
         margin-right: -15%;
         font: bold 12pt sans-serif;
     }
-
     .form-group {
         margin-top: 3%;
         margin-left: 5%;
@@ -47,7 +51,7 @@
 
     .editor {
         font: italic 12pt sans-serif;
-        display: flex;
+        display: inline-flex;
         background: none;
         width: 23vw;
         border: none;
@@ -67,7 +71,7 @@
         display: block;
         border: none;
         margin-top: 8%;
-        margin-left: 18%;
+        margin-left: 3%;
         text-decoration: none;
         padding: 10px;
         width: 50%;
@@ -151,8 +155,9 @@
             </div>
             <img src="~/fonts/cracha_vendProd.png" class="cracha">
             <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
+                <div class="col-md-offset-2 col-md-10" style="display:flex">
                     <input type="submit" value="Vender" class="btn_cad" onclick="Vender()" />
+                    <input type="reset" value="Limpar" class="btn_cad" onclick="" />
                 </div>
             </div>
             <div>
@@ -161,6 +166,16 @@
         </div>
     }
 </section>
+<script>
+    function Vender() {
+        if (document.querySelector(".editor").value == "") {
+            alert("Preecha os campos obrigatórios!");
+        }
+        else {
+            alert("Vendido!")
+        }
+    }
+</script>
 @section Scripts{
     <script>
     $(document).ready(function () {

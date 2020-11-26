@@ -22,10 +22,10 @@ namespace AppBancoDominio
         [Required(ErrorMessage = "Obrigatório digitar o Telefone do Cliente!")]
         public string Tel_cli { get; set; }
         [DisplayName("Nome do Produto:")]
-        [Required(ErrorMessage = "Obrigarótio digitar o nome do Produto!")]
+        [Required(ErrorMessage = "Obrigatório digitar o nome do Produto!")]
         public string Nm_prod { get; set; }
         [DisplayName("Quantidade do Produto:")]
-        [Required(ErrorMessage = "Obrigarótio digitar a Quantidade do Produto!")]
+        [Required(ErrorMessage = "Obrigatório digitar a Quantidade do Produto!")]
         public int Qntd_prod { get; set; }
         [DisplayName("Categoria do Produto:")]
         [Required(ErrorMessage = "Obrigatório digitar a Categoria do Produto!")]
