@@ -9,3 +9,6 @@ function toggleFormFunc() {
 function EntrarFunc() {
 
 }
+function EntrarGer() {
+
+}
