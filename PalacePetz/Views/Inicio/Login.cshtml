@@ -28,8 +28,15 @@
             align-items: center;
             padding: 20px;
         }
-        .text-danger{
+        .text-danger {
             color: red;
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            margin-top: 10px;
+            margin-bottom: 2px;
+            margin-left: 1%;
             font-style: italic;
         }
 
@@ -81,7 +88,7 @@
                     }
 
             section .user .formBx h2 {
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 600;
                 text-transform: uppercase;
                 letter-spacing: 2px;
@@ -93,13 +100,14 @@
 
             section .container .user .formBx .editor{
                 position: relative;
-                width: 110%;
                 padding: 10px;
+                width: 300px;
                 background: #d9d9d9;
                 color: #333;
                 border: none;
                 margin-top: 10px;
                 margin-bottom: 2px;
+                margin-left: 1%;
                 letter-spacing: 1px;
                 font-weight: 300;
             }
@@ -109,7 +117,6 @@
                 text-decoration: none;
                 padding: 10px;
                 width: 80%;
-                margin-left: 11%;
                 max-width: 100%;
                 background: #677eff;
                 color: #fff;
@@ -129,11 +136,11 @@
                 font-weight: 300;
             }
 
-            section .container .user .formBx form .signup a {
-                font-weight: 600;
-                text-decoration: none;
-                color: #677eff;
-            }
+                section .container .user .formBx form .signup a {
+                    font-weight: 600;
+                    text-decoration: none;
+                    color: #677eff;
+                }
 
             section .container .Ger {
                 pointer-events: none;
@@ -203,7 +210,7 @@
                 <div class="formBx">
                     <form action="Index">
                         <div class="form-horizontal">
-                            <h2 id="text">Login</h2>
+                            <h2 id="text">Entrar como Funcionário</h2>
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                             <div class="form-group" style="margin-bottom: 10%">
                                 <div class="col-md-10">
@@ -211,16 +218,16 @@
                                     @Html.ValidationMessageFor(model => model.user_login, "", new { @class = "text-danger" })
                                 </div>
                             </div>
-                            <div class="form-group" style="margin-bottom: 10%;">
+                            <div class="form-group" style="margin-bottom: 10%">
                                 <div class="col-md-10">
-                                    @Html.PasswordFor(model => model.senha_login, new { htmlAttributes = new { placeholder = "Senha de Usuário", @class = "editor" } })
+                                    @Html.EditorFor(model => model.senha_login, new { htmlAttributes = new { placeholder = "Senha de Usuário", @class = "editor" } })
                                     @Html.ValidationMessageFor(model => model.senha_login, "", new { @class = "text-danger" })
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="col-md-offset-2 col-md-10">
-                                    <input type="submit" value="Entrar" class="btn btn-default" />
+                                    <input type="submit" value="Entrar" class="btn btn-default" onclick="EntrarFunc()"/>
                                 </div>
                             </div>
                             <p class="signup"><a href="#" onclick="toggleFormGer();"> ENTRAR COMO GERENTE</a></p>
@@ -230,17 +237,28 @@
             </div>
             <div class="user Ger">
                 <div class="formBx">
-                    <form action="Inicio/Index">
-                        <h2>Entrar como Gerente</h2>
-                        <input type="text" name="" placeholder="ID de Funcionário">
-                        <input type="password" name="" placeholder="CPF de Funcionário">
-                        <div class="form-group">
-                            <div class="col-md-offset-2 col-md-10">
-                                <input type="submit" value="Entrar" class="btn btn-default" />
+                        <div class="form-horizontal">
+                            <h2>Entrar como Gerente</h2>
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group" style="margin-bottom: 10%">
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.user_login, new { htmlAttributes = new { placeholder = "Nome de Usuário", @class = "editor", @id = "id_func" } })
+                                    @Html.ValidationMessageFor(model => model.user_login, "", new { @class = "text-danger" })
+                                </div>
                             </div>
-                        </div>
-                        <p class="signup"><a href="#" onclick="toggleFormFunc();"> ENTRAR COMO FUNCIONÁRIO</a></p>
-                    </form>
+                            <div class="form-group" style="margin-bottom: 10%">
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.senha_login, new { htmlAttributes = new { placeholder = "Senha de Usuário", @class = "editor" } })
+                                    @Html.ValidationMessageFor(model => model.senha_login, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Entrar" class="btn btn-default" />
+                                </div>
+                            </div>
+                            <p class="signup"><a href="#" onclick="toggleFormFunc();"> ENTRAR COMO FUNCIONÁRIO</a></p>
+                    </div>
                 </div>
                 <div class="imgBx"><img src="~/fonts/dog2.jpg" alt=""></div>
             </div>
