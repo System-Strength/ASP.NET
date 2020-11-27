@@ -21,8 +21,14 @@ namespace PalacePetz.Controllers
         {
             if (ModelState.IsValid)
             {
-                var metodoLogin = new LoginDAO();
-                return RedirectToAction("Index");
+                if(login.user_login == "FuncPP2020" && login.senha_login == "FuncDS2020")
+                {
+                    var metodoLogin = new LoginDAO();
+                    return RedirectToAction("Index");
+                }
+                else{
+                    ModelState.AddModelError("senha_login", "Usuário e senha Inválidos!");
+                }
             }
             return View(login);
         }

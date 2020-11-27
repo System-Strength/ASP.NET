@@ -204,67 +204,68 @@
         @using (Html.BeginForm())
         {
             @Html.AntiForgeryToken()
-        <div class="container">
-            <div class="user Func">
-                <div class="imgBx"><img src="~/fonts/dog1.jpg" alt="" id="img"></div>
-                <div class="formBx">
-                    <form action="Index">
-                        <div class="form-horizontal">
-                            <h2 id="text">Entrar como Funcionário</h2>
-                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                            <div class="form-group" style="margin-bottom: 10%">
-                                <div class="col-md-10">
-                                    @Html.EditorFor(model => model.user_login, new { htmlAttributes = new { placeholder = "Nome de Usuário", @class = "editor", @id = "id_func" } })
-                                    @Html.ValidationMessageFor(model => model.user_login, "", new { @class = "text-danger" })
+            <div class="container">
+                <div class="user Func">
+                    <div class="imgBx"><img src="~/fonts/dog1.jpg" alt="" id="img"></div>
+                    <div class="formBx">
+                        <form action="Index">
+                            <div class="form-horizontal">
+                                <h2 id="text">Entrar como Funcionário</h2>
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group" style="margin-bottom: 10%">
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.user_login, new { htmlAttributes = new { placeholder = "Nome de Usuário", @class = "editor", @id = "id_func" } })
+                                        @Html.ValidationMessageFor(model => model.user_login, "", new { @class = "text-danger" })
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group" style="margin-bottom: 10%">
-                                <div class="col-md-10">
-                                    @Html.EditorFor(model => model.senha_login, new { htmlAttributes = new { placeholder = "Senha de Usuário", @class = "editor" } })
-                                    @Html.ValidationMessageFor(model => model.senha_login, "", new { @class = "text-danger" })
+                                <div class="form-group" style="margin-bottom: 10%">
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.senha_login, new { htmlAttributes = new { placeholder = "Senha de Usuário", @class = "editor" } })
+                                        @Html.ValidationMessageFor(model => model.senha_login, "", new { @class = "text-danger" })
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group">
-                                <div class="col-md-offset-2 col-md-10">
-                                    <input type="submit" value="Entrar" class="btn btn-default" onclick="EntrarFunc()"/>
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Entrar" class="btn btn-default" onclick="EntrarFunc()" />
+                                    </div>
                                 </div>
+                                <p class="signup"><a href="#" onclick="toggleFormGer();"> ENTRAR COMO GERENTE</a></p>
                             </div>
-                            <p class="signup"><a href="#" onclick="toggleFormGer();"> ENTRAR COMO GERENTE</a></p>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div class="user Ger">
-                <div class="formBx">
+                <div class="user Ger">
+                    <div class="formBx">
                         <div class="form-horizontal">
                             <h2>Entrar como Gerente</h2>
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                             <div class="form-group" style="margin-bottom: 10%">
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.user_login, new { htmlAttributes = new { placeholder = "Nome de Usuário", @class = "editor", @id = "id_func" } })
+                                    @Html.EditorFor(model => model.user_login, new { htmlAttributes = new { placeholder = "Nome de Usuário", @class = "editor", @id = "user_func" } })
                                     @Html.ValidationMessageFor(model => model.user_login, "", new { @class = "text-danger" })
                                 </div>
                             </div>
                             <div class="form-group" style="margin-bottom: 10%">
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.senha_login, new { htmlAttributes = new { placeholder = "Senha de Usuário", @class = "editor" } })
+                                    @Html.EditorFor(model => model.senha_login, new { htmlAttributes = new { placeholder = "Senha de Usuário", @class = "editor", @id = "senha_func" } })
                                     @Html.ValidationMessageFor(model => model.senha_login, "", new { @class = "text-danger" })
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-offset-2 col-md-10">
-                                    <input type="submit" value="Entrar" class="btn btn-default"  onclick="EntrarGer()"/>
+                                    <input type="submit" value="Entrar" class="btn btn-default" onclick="EntrarGer()" />
                                 </div>
                             </div>
                             <p class="signup"><a href="#" onclick="toggleFormFunc();"> ENTRAR COMO FUNCIONÁRIO</a></p>
+                        </div>
                     </div>
+                    <div class="imgBx"><img src="~/fonts/dog2.jpg" alt=""></div>
                 </div>
-                <div class="imgBx"><img src="~/fonts/dog2.jpg" alt=""></div>
             </div>
-        </div>
         }
     </section>
 </body>
 @Scripts.Render("~/Scripts/Login.js")
+
 </html>
