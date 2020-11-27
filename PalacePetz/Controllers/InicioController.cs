@@ -22,7 +22,6 @@ namespace PalacePetz.Controllers
             if (ModelState.IsValid)
             {
                 var metodoLogin = new LoginDAO();
-                metodoLogin.Insert(login);
                 return RedirectToAction("Index");
             }
             return View(login);
