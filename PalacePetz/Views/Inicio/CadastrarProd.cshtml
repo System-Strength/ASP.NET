@@ -98,7 +98,7 @@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             <div class="col-md-10">
-                @Html.EditorFor(model => model.nm_prod, new { htmlAttributes = new { placeholder = "Nome do Produto", @class = "editor" } })
+                @Html.EditorFor(model => model.nm_prod, new { htmlAttributes = new { placeholder = "Nome do Produto", @class = "editor"} })
                 @Html.ValidationMessageFor(model => model.nm_prod, "", new { @class = "text-danger" })
             </div>
         </div>

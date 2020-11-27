@@ -30,7 +30,8 @@
         height: 98vh;
         margin-top: 0.8%;
     }
-    .text-danger{
+
+    .text-danger {
         margin-left: -20%;
         padding-bottom: 1%;
         font-size: 10pt;
@@ -43,6 +44,7 @@
         margin-right: -15%;
         font: bold 12pt sans-serif;
     }
+
     .form-group {
         margin-top: 3%;
         margin-left: 5%;
@@ -156,8 +158,8 @@
             <img src="~/fonts/cracha_vendProd.png" class="cracha">
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10" style="display:flex">
-                    <input type="submit" value="Vender" class="btn_cad" onclick="Vender()" />
-                    <input type="reset" value="Limpar" class="btn_cad" onclick="" />
+                    <input type="submit" value="Vender" class="btn_cad" onclick="Vender()"  />
+                    <input type="reset" value="Limpar" class="btn_cad" onclick="Limpar()" />
                 </div>
             </div>
             <div>
@@ -178,11 +180,11 @@
 </script>
 @section Scripts{
     <script>
-    $(document).ready(function () {
-        $("#Cpf_cli").inputmask("mask", { "mask": "999.999.999-99" }, { reverse: true });
-    })
-    $(document).ready(function () {
-        $("#Tel_cli").inputmask("mask", { "mask": "(99)9999-99999" });
-    })
+        $(document).ready(function () {
+            $("#Cpf_cli").inputmask("mask", { "mask": "999.999.999-99" }, { reverse: true });
+        })
+        $(document).ready(function () {
+            $("#Tel_cli").inputmask("mask", { "mask": "(99)9999-99999" });
+        })
     </script>
 }

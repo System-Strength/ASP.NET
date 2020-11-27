@@ -84,7 +84,7 @@ create table tbl_VendaProd(
     End_cli varchar(50) not null,
     Comple_cli varchar(100),
     Tel_cli varchar(15) not null,
-	Nm_prod varchar(100) not null,
+	nm_prod varchar(100) not null references tbl_produto(nm_prod),
     Qntd_prod int not null,
     Cat_prod varchar(50) not null,
     Forma_paga varchar(100) not null
