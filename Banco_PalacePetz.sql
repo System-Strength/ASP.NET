@@ -10,6 +10,11 @@ create table tbl_func(
     end_func varchar(50) not null,
     tel_func varchar(15) not null
 );
+create table tbl_gerente(
+	nm_ger varchar(50) not null,
+    cpf_ger varchar(14) not null,
+    senha_ger varchar(12) not null
+);
 
 create table tbl_cliente(
 	id_cli int primary key auto_increment,
@@ -90,7 +95,7 @@ create table tbl_VendaProd(
     Forma_paga varchar(100) not null
 );
 create table tbl_login(
-	id_func int not null primary key, constraint foreign key(id_func) references tbl_func(id_func),
-    cpf_func varchar(14) not null
+	user_login varchar(14) not null,
+    senha_login varchar(14) not null primary key
 );
-select * from tbl_VendaProd;
+select * from tbl_login;

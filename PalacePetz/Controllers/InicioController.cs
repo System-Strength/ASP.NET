@@ -11,9 +11,21 @@ namespace PalacePetz.Controllers
     public class InicioController : Controller
     {
         //GET: Inicio
+        
         public ActionResult Login()
-        { 
+        {
             return View();
+        }
+        [HttpPost]
+        public ActionResult Login(Login login)
+        {
+            if (ModelState.IsValid)
+            {
+                var metodoLogin = new LoginDAO();
+                metodoLogin.Insert(login);
+                return RedirectToAction("Index");
+            }
+            return View(login);
         }
         public ActionResult Index()
         {
