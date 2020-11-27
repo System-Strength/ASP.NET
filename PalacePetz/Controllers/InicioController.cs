@@ -27,7 +27,7 @@ namespace PalacePetz.Controllers
                     return RedirectToAction("Index");
                 }
                 else{
-                    ModelState.AddModelError("senha_login", "Usuário e senha Inválidos!");
+                    ModelState.AddModelError("senha_login", "Usuário ou senha Inválidos!");
                 }
             }
             return View(login);
