@@ -7,7 +7,7 @@ namespace AppBancoDominio
     public class Gerente
     {
         [DisplayName("Nome do Gerente:")]
-        public int nm_ger { get; set; }
+        public string nm_ger { get; set; }
         [DisplayName("CPF do Gerente:")]
         [StringLength(14, MinimumLength = 14, ErrorMessage = "Esse campo deve ter 11 caracteres!")]
         public string cpf_ger { get; set; }

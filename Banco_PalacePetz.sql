@@ -13,7 +13,7 @@ create table tbl_func(
 create table tbl_gerente(
 	nm_ger varchar(50) not null,
     cpf_ger varchar(14) not null,
-    senha_ger varchar(12) not null
+    senha_ger varchar(12)  primary key not null
 );	
 
 create table tbl_cliente(
@@ -98,4 +98,4 @@ create table tbl_login(
 	user_login varchar(14) not null,
     senha_login varchar(14) not null primary key
 );
-select * from tbl_login;
+select * from tbl_gerente;
