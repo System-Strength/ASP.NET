@@ -113,16 +113,15 @@
                 <div class="form-horizontal">
                     <h2>Insira sua senha de Gerente</h2>
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                    <div class="form-group">
-                        <div class="col-md-10">
-                            @Html.PasswordFor(model => model.senha_ger, new { @class = "senha" })
-                            @Html.ValidationMessageFor(model => model.senha_ger, "", new { @class = "text-danger" })
-                        </div>
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.PasswordFor(model => model.senha_ger, new { @class = "senha", @id = "senha" })
+                        @Html.ValidationMessageFor(model => model.senha_ger, "", new { @class = "text-danger" })
                     </div>
+                </div>
                     <input type="submit" value="Entrar" class="btn_ent" />
                 </div>
             </form>
-
         }
     </section>
 @Scripts.Render("~/bundles/Limpar")
