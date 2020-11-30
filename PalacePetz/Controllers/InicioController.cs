@@ -40,6 +40,24 @@ namespace PalacePetz.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult VerificaGer(Gerente gerente)
+        {
+            if (ModelState.IsValid)
+            {
+                if(gerente.senha_ger == "GerFunc2020")
+                {
+                    var metodoGer = new GerenteDAO();
+                    return RedirectToAction("CadastrarFunc");
+                }
+                else
+                {
+                    ModelState.AddModelError("senha_ger", "Senha de Gerente Inválida!");
+                }
+            }
+            return View(gerente);
+        }
+
         public ActionResult CadastrarFunc()
         {
             return View();
