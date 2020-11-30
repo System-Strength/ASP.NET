@@ -14,7 +14,7 @@ create table tbl_gerente(
 	nm_ger varchar(50) not null,
     cpf_ger varchar(14) not null,
     senha_ger varchar(12) not null
-);
+);	
 
 create table tbl_cliente(
 	id_cli int primary key auto_increment,
