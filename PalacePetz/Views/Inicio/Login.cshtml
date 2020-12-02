@@ -221,41 +221,26 @@
                                         @Html.ValidationMessageFor(model => model.senha_login, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
-
                                 <div class="form-group">
                                     <div class="col-md-offset-2 col-md-10">
                                         <input type="submit" value="Entrar" class="btn btn-default" onclick="EntrarFunc()" />
                                     </div>
                                 </div>
-                                <p class="signup"><a href="#" onclick="toggleFormGer();"> ENTRAR COMO GERENTE</a></p>
+                                <p class="signup"><a href="#" onclick="toggleFormGer();"> Esqueceu a senha?</a></p>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="user Ger">
                     <div class="formBx">
-                        <div class="form-horizontal">
-                            <h2>Entrar como Gerente</h2>
-                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                            <div class="form-group" style="margin-bottom: 10%">
-                                <div class="col-md-10">
-                                    @Html.EditorFor(model => model.user_login, new { htmlAttributes = new { placeholder = "Nome de Usuário", @class = "editor", @id = "user_func" } })
-                                    @Html.ValidationMessageFor(model => model.user_login, "", new { @class = "text-danger" })
-                                </div>
+                        <form>
+                            <div class="form-horizontal">
+                                <h2 style="font-size: 18pt;">RECUPERE SUA SENHA</h2>
+                                <h3 style="margin-top: 20%;font-size: 18px;font-weight: 600;text-transform: uppercase;letter-spacing: 2px;    text-align: center;width: 100%;margin-bottom: 10px;color: #555;">Solicite seu gerente, e recupere sua senha.</h3>
+                                <div style="font-size: 25pt; text-align: center;">😉</div>
+                                <p class="signup" style="text-align: center; margin-top: 15%;"><a href="#" onclick="toggleFormFunc();"> ENTRAR COMO FUNCIONÁRIO</a></p>
                             </div>
-                            <div class="form-group" style="margin-bottom: 10%">
-                                <div class="col-md-10">
-                                    @Html.PasswordFor(model => model.senha_login, new { placeholder = "Senha de Usuário", @class = "editor" })
-                                    @Html.ValidationMessageFor(model => model.senha_login, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-offset-2 col-md-10">
-                                    <input type="submit" value="Entrar" class="btn btn-default" onclick="EntrarGer()" />
-                                </div>
-                            </div>
-                            <p class="signup"><a href="#" onclick="toggleFormFunc();"> ENTRAR COMO FUNCIONÁRIO</a></p>
-                        </div>
+                        </form>
                     </div>
                     <div class="imgBx"><img src="~/fonts/dog2.jpg" alt=""></div>
                 </div>

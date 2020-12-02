@@ -32,6 +32,5 @@ namespace AppBancoADO
             if (conexao.State == System.Data.ConnectionState.Open)
                 conexao.Close();
         }
-
     }
 }
